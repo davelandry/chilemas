@@ -1,0 +1,86 @@
+---
+---
+
+@import "reset";
+@import "vendor";
+
+/* download Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Playfair+Display:400,400italic);
+$lato: "Lato", sans-serif;
+$playfair: "Playfair Display", serif;
+
+body {
+  @include background-stretch();
+  background-image: url("images/background.jpg");
+  font-family: $lato;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+$width: 500px;
+
+$buffer: 10%;
+$opacity: 0.5;
+#gradient {
+  bottom: $buffer;
+  position: absolute;
+  top: $buffer;
+  width: 100%;
+
+  &:before {
+    @include gradient(rgba(0, 0, 0, 0), 0, rgba(0, 0, 0, $opacity), 1);
+    bottom: 50%;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &:after {
+    @include gradient(rgba(0, 0, 0, $opacity), 0, rgba(0, 0, 0, 0), 1);
+    bottom: 0;
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+
+}
+
+main {
+  left: 50%;
+  margin-left: -$width/2;
+  margin-top: -140px;
+  position: absolute;
+  top: 50%;
+  width: $width;
+
+  #logo {
+    width: 100%;
+  }
+
+  h2 {
+    color: white;
+    font-weight: 400;
+    margin-left: 65px;
+  }
+
+  #contact {
+    background-color: #1d8759;
+    color: white;
+    display: block;
+    font-size: 16px;
+    margin: 40px ($width - 250px)/2;
+    padding: 7px 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    width: 250px;
+
+    &:hover {
+      @include shadow();
+      cursor: pointer;
+    }
+
+  }
+
+}
