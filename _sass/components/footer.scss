@@ -1,0 +1,42 @@
+footer {
+  padding: 10px 0 15px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  a {
+    color: #444;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 10px;
+    padding: 4px 6px;
+    text-align: center;
+    text-decoration: none;
+
+    i {
+      margin: 2px 5px 0 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+  }
+
+  #gobierno {
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 15px;
+
+    img {
+      @include shadow();
+      height: 60px;
+      width: 60px;
+    }
+
+  }
+
+}

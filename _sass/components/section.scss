@@ -1,0 +1,63 @@
+section {
+  @include box();
+  @include flex();
+  @include flex-direction(row);
+  @include justify(center);
+  @include align-items(center);
+  margin: 50px auto;
+  max-width: 750px;
+  padding: 0 25px;
+  position: relative;
+
+  .section-logo {
+    margin-right: 25px;
+    width: 200px;
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  div {
+    @include flex-size(1);
+    text-align: left;
+
+    h3 {
+      color: #157fff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.25;
+
+      a {
+        border-bottom: 1px solid #157fff;
+        color: #157fff;
+        text-decoration: none;
+
+        &:hover {
+          border-bottom: 2px solid #157fff;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media only screen and (max-width : 550px) {
+
+  section {
+    @include flex-direction(column);
+
+    .section-logo {
+      margin: 0 0 25px;
+    }
+
+
+  }
+
+}

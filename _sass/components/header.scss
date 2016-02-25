@@ -1,0 +1,48 @@
+$width: 500px;
+
+header {
+  @include flex-size(1);
+  @include flex();
+  @include flex-direction(column);
+  @include justify(center);
+  @include align-items(center);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  #logo {
+    @include box();
+    margin: 50px 25px 0;
+    max-width: $width;
+    width: 90%;
+  }
+
+  h2 {
+    @include box();
+    color: white;
+    font-weight: 400;
+    margin: 0 25px 75px;
+    max-width: $width;
+    padding-left: 65px;
+    width: 90%;
+  }
+
+}
+
+@media only screen and (max-width : 550px) {
+
+  header {
+
+    #logo {
+      margin: 25px 25px 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin: 0 25px 40px;
+      padding-left: 45px;
+    }
+
+  }
+
+}

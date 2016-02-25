@@ -11,19 +11,50 @@
 
     <link rel="icon" type="image/png" href="/images/icon.ico?v=2">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
+
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/parallax.min.js"></script>
 
   </head>
   <body>
 
-    <div id="gradient"></div>
+    <header>
 
-    <main>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/images/background.jpg"></div>
+
+      <div id="gradient"></div>
 
       <img id="logo" src="/images/logo.png" />
       <h2>Fostering innovation between<br />Chile and Massachusetts</h2>
-      <a id="contact" href="mailto:chile-mass@minrel.gov.cl">Contact Us for More Information</a>
+
+    </header>
+
+    <main>
+
+      <section>
+        <a class="section-logo" href="http://chilemass.incubatec.cl">
+          <img src="/images/puente.png" />
+        </a>
+        <div>
+          <h3>Are you the next breakthrough Chilean technology?</h3>
+          <p>
+            We are bringing American venture capital to Chile to help fund the next wave of Chilean startups. <a href="http://chilemass.incubatec.cl">Click here</a> and apply by March 11th to participate in the next round of funding.
+          </p>
+        </div>
+      </section>
 
     </main>
+
+    <footer>
+      <a id="contact" href="mailto:chile-mass@minrel.gov.cl"><i class="fa fa-envelope"></i>Contact Us for More Information</a>
+      <a id="twitter" href="https://twitter.com/chilemass"><i class="fa fa-twitter"></i>Follow us on Twitter!</a>
+
+      <a id="gobierno" href="http://www.gob.cl/" target="_blank">
+        <img src="/images/gobierno.png" />
+      </a>
+
+    </footer>
 
     <script>
 
