@@ -15,6 +15,7 @@ header {
     margin: 50px 25px 0;
     max-width: $width;
     width: 90%;
+    z-index: 2;
   }
 
   h2 {
@@ -25,6 +26,7 @@ header {
     max-width: $width;
     padding-left: 65px;
     width: 90%;
+    z-index: 2;
   }
 
 }
@@ -35,11 +37,13 @@ header {
 
     #logo {
       margin: 25px 25px 0;
+      max-width: 90%;
     }
 
     h2 {
       font-size: 20px;
       margin: 0 25px 40px;
+      max-width: 90%;
       padding-left: 45px;
     }
 

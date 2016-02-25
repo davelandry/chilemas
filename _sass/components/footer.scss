@@ -40,3 +40,16 @@ footer {
   }
 
 }
+
+@media only screen and (max-width : 550px) {
+
+  footer {
+
+    #gobierno img {
+      height: 40px;
+      width: 40px;
+    }
+
+  }
+
+}
