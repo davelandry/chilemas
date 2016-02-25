@@ -40,6 +40,22 @@ body {
 
 }
 
+@media only screen and (max-width : 550px) {
+
+  .parallax-window::after {
+
+    background-color: rgba(0, 0, 0, 0.35);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+  }
+
+}
+
 main {
   text-align: center;
 }
