@@ -1,0 +1,55 @@
+$coins: (
+  edu: red,
+  energy: blue,
+  cult: tan,
+  tech: lime,
+  pub: purple
+);
+
+$coin-size: 30px;
+@each $coin, $color in $coins {
+  img.coin.#{$coin} {
+    @include rounded($coin-size/2);
+    @include shadow();
+    background-color: $color;
+    display: inline-block;
+    height: $coin-size;
+    min-width: $coin-size;
+    max-width: $coin-size;
+    width: $coin-size;
+  }
+}
+
+#coin-descs {
+  @include flex();
+  @include flex-direction(row);
+  @include flex-wrap();
+  padding: 15px;
+
+  .coin-desc {
+    @include box();
+    @include shadow();
+    @include flex();
+    @include flex-direction(row);
+    @include flex-wrap();
+    @include align-content(flex-start);
+    background-color: white;
+    margin: 15px;
+    min-width: 300px;
+    padding: 20px;
+    width: 300px;
+
+    h3 {
+      @include flex-size(1);
+      display: inline-block;
+      margin: 4px 0 0 7px;
+    }
+
+    p {
+      margin-top: 10px;
+      min-width: 100%;
+    }
+
+  }
+
+}
