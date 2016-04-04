@@ -1,17 +1,13 @@
-$coins: (
-  edu: red,
-  energy: blue,
-  cult: tan,
-  tech: lime,
-  pub: purple
-);
+$coins: ("edu", "energy", "cult", "tech", "pub");
 
 $coin-size: 30px;
-@each $coin, $color in $coins {
+@each $coin in $coins {
   img.coin.#{$coin} {
     @include rounded($coin-size/2);
     @include shadow();
-    background-color: $color;
+    background-image: url("/images/coins/#{$coin}.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
     display: inline-block;
     height: $coin-size;
     min-width: $coin-size;
