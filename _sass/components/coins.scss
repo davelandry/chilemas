@@ -17,33 +17,44 @@ $coin-size: 30px;
 }
 
 #coin-descs {
-  @include flex();
-  @include flex-direction(row);
-  @include flex-wrap();
-  padding: 15px;
+  @include box();
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 25px;
 
   .coin-desc {
     @include box();
-    @include shadow();
     @include flex();
     @include flex-direction(row);
-    @include flex-wrap();
     @include align-content(flex-start);
-    background-color: white;
-    margin: 15px;
-    min-width: 300px;
-    padding: 20px;
-    width: 300px;
+    margin: 25px 0;
+    width: 100%;
 
-    h3 {
-      @include flex-size(1);
-      display: inline-block;
-      margin: 4px 0 0 7px;
+    img {
+      @include rounded($coin-size);
+      height: $coin-size * 2;
+      min-width: $coin-size * 2;
+      max-width: $coin-size * 2;
+      width: $coin-size * 2;
     }
 
-    p {
-      margin-top: 10px;
-      min-width: 100%;
+    .coin-text {
+      margin: 5px $coin-size 0 15px;
+
+      h3 {
+        font-weight: 700;
+      }
+
+      p {
+        margin: 10px 0;
+        min-width: 100%;
+        padding: 0;
+      }
+
+      @media screen and (max-width: 415px) {
+        margin: 5px 0 0 15px;
+      }
+
     }
 
   }

@@ -1,0 +1,13 @@
+.parallax-window {
+  @include flex();
+  @include align-items(center);
+  height: 200px;
+
+  #logo {
+    margin: 0 0 20px;
+  }
+
+  &:first-child {
+    height: 300px;
+  }
+}

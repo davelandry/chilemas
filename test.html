@@ -19,52 +19,64 @@ speed: "0.7"
     <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
 
     <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/parallax.min.js"></script>
 
   </head>
   <body>
 
-    <div id="background"></div>
-
     <main>
 
-      <img id="logo" src="/images/logo.png" />
-
-      <div class="intro">
-        <h2>The Currency of Innovation</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices, odio pellentesque commodo tristique, nulla orci fringilla orci, in interdum diam lorem volutpat tortor. Quisque dictum sollicitudin nisi vel placerat. Nunc aliquet condimentum faucibus. Mauris ut cursus magna. Sed mollis egestas hendrerit. Mauris interdum dapibus lectus id imperdiet. Praesent vitae nisi non lacus pulvinar consequat.</p>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/images/background.jpg">
+        <img id="logo" src="/images/logo.png" />
       </div>
 
-      <section id="coin-descs">
-        {% assign list = (site.coins | sort: 'order') %}
-        {% for coin in list %}
-        <div class="coin-desc">
-          <img class="coin {{ coin.shortname }}" src="/images/blank.png" />
-          <h3>{{ coin.title }}</h3>
-          {{ coin.content }}
+      <div class="intro flex">
+
+        <div id="currency">
+          <h2>The Currency of Innovation</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices, odio pellentesque commodo tristique, nulla orci fringilla orci, in interdum diam lorem volutpat tortor. Quisque dictum sollicitudin nisi vel placerat. Nunc aliquet condimentum faucibus. Mauris ut cursus magna. Sed mollis egestas hendrerit. Mauris interdum dapibus lectus id imperdiet. Praesent vitae nisi non lacus pulvinar consequat.</p>
+
+          <section id="coin-descs">
+            {% assign list = (site.coins | sort: 'order') %}
+            {% for coin in list %}
+            <div class="coin-desc">
+              <img class="coin {{ coin.shortname }}" src="/images/blank.png" />
+              <div class="coin-text">
+                <h3>{{ coin.title }}</h3>
+                {{ coin.content }}
+              </div>
+            </div>
+            {% endfor %}
+          </section>
         </div>
-        {% endfor %}
-      </section>
+
+        <a class="twitter-timeline" href="https://twitter.com/ChileMass" data-widget-id="721864742059565057"><div class="title">Tweets <span>by @ChileMass</span></div><i class="fa fa-spinner fa-spin"></i></a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/images/crowd.jpg"></div>
 
       <div class="intro">
         <h2>The Wall of Champions</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices, odio pellentesque commodo tristique, nulla orci fringilla orci, in interdum diam lorem volutpat tortor. Quisque dictum sollicitudin nisi vel placerat. Nunc aliquet condimentum faucibus. Mauris ut cursus magna. Sed mollis egestas hendrerit. Mauris interdum dapibus lectus id imperdiet. Praesent vitae nisi non lacus pulvinar consequat.</p>
-      </div>
 
-      <section id="wall">
-        {% assign list = (site.champs | sort: 'priority') %}
-        {% for champ in list) %}
-        <div class="champ">
-          <div class="champ-pic" style="background-image: url('{{ champ.image }}');">
-          {% for coin in champ.coins reversed %}
-            <img class="coin {{ coin }}" src="/images/blank.png" />
-          {% endfor %}
+        <section id="wall">
+          {% assign list = (site.champs | sort: 'priority') %}
+          {% for champ in list) %}
+          <div class="champ">
+            <div class="champ-pic" style="background-image: url('{{ champ.image }}');">
+            {% for coin in champ.coins reversed %}
+              <img class="coin {{ coin }}" src="/images/blank.png" />
+            {% endfor %}
+            </div>
+            <h3>{{ champ.name }}</h3>
+            <sub>{{ champ.affiliation }}</sub>
+            {{ champ.content }}
           </div>
-          <h3>{{ champ.name }}</h3>
-          <sub>{{ champ.affiliation }}</sub>
-          {{ champ.content }}
-        </div>
-        {% endfor %}
-      </section>
+          {% endfor %}
+        </section>
+
+      </div>
 
     </main>
 

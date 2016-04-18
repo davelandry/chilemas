@@ -1,18 +1,69 @@
 .intro {
-  color: #eee;
+  background-color: $white;
+  color: $black;
   padding: 25px 0;
   position: relative;
 
   h2 {
-    @include text-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
     font-size: 30px;
+    margin-top: 15px;
   }
 
   p {
     @include box();
-    @include text-shadow(0 1px 3px rgba(0, 0, 0, 0.75));
     margin: 25px auto 5px;
-    padding: 0 25px;
-    width: 50%;
+    max-width: 600px;
+    padding: 0 25px 25px;
+    width: 100%;
   }
+
+  .twitter-timeline {
+    @include box();
+    background-color: white;
+    color: rgb(41, 47, 51);
+    font-family: Helvetica, Roboto, 'Segoe UI', Calibri, sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 70px 20px 40px !important;
+    text-align: center;
+    text-decoration: none;
+    width: 300px !important;
+
+    .title {
+      border-bottom: 1px solid rgba(15, 70, 100, 0.117647);
+      padding: 10px;
+      text-align: left;
+
+      span {
+        color: rgb(136, 153, 166);
+        font-size: 12px;
+        font-weight: 400;
+        vertical-align: baseline;
+      }
+    }
+
+    i {
+      color: rgba(15, 70, 100, 0.117647);
+      margin: 20px auto;
+    }
+  }
+
+  iframe {
+    height: auto !important;
+    margin: 70px 20px 40px !important;
+    width: 300px !important;
+  }
+
+  &.flex {
+    @include flex();
+    @include flex-direction(row);
+
+    @media screen and (max-width: 600px) {
+      @include flex-direction(column);
+      .twitter-timeline, iframe {
+        display: none !important;
+      }
+    }
+  }
+
 }
