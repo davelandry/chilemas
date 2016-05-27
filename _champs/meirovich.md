@@ -7,6 +7,5 @@ coins:
   - edu
   - tech
   - pub
+link: www.genesispartners.cl
 ---
-
-[www.genesispartners.cl](www.genesispartners.cl)

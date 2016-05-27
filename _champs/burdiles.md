@@ -7,5 +7,3 @@ coins:
   - pub
   - tech
 ---
-
-Sergio is working to develop the Chilean economy through the use of digital technologies in different industries, particularly natural resources.

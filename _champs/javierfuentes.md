@@ -9,5 +9,3 @@ coins:
   - tech
   - pub
 ---
-
-Business and Policy Student

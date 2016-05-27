@@ -9,6 +9,5 @@ coins:
   - tech
   - cult
   - pub
+link: www.nexocapitalpartners.com
 ---
-
-[www.nexocapitalpartners.com](www.nexocapitalpartners.com)

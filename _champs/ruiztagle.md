@@ -6,5 +6,3 @@ affiliation: Entrepreneur/Startup
 coins:
   - tech
 ---
-
-Passionate about connections to create value.
