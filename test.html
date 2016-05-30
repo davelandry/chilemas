@@ -1,5 +1,4 @@
 ---
-speed: "0.7"
 ---
 
 <!DOCTYPE html>
@@ -64,7 +63,7 @@ speed: "0.7"
               <img class="coin {{ coin }}" src="/images/blank.png" />
             {% endfor %}
             </div>
-            <h3>{{ champ.name }}</h3>
+            <h3>{% if champ.link %}<a href="{{ champ.link }}" target="_blank">{% endif %}{{ champ.name }}{% if champ.link %}</a>{% endif %}</h3>
             <sub>{{ champ.affiliation }}</sub>
           </div>
           {% endfor %}
