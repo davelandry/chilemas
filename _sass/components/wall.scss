@@ -8,23 +8,23 @@
     background-color: white;
     display: inline-block;
     margin: 15px;
-    min-width: 225px;
-    width: 225px;
+    min-width: 200px;
+    width: 200px;
 
     .champ-pic {
       @include background-stretch();
       display: block;
-      height: 250px;
+      height: 200px;
       position: relative;
       width: 100%;
 
       .coin {
-        left: 5px;
+        right: 5px;
         position: absolute;
 
         @for $n from 1 through 5 {
           &:nth-last-child(#{$n}) {
-            bottom: ($n - 1) * $coin-size/2 - $coin-size - 5;
+            bottom: ($n - 1) * $coin-size/2 - $coin-size - 11;
           }
         }
 
@@ -33,13 +33,15 @@
     }
 
     h3 {
-      margin: 10px 10px 0 $coin-size + 10px;
+      font-size: 15px;
+      margin: 9px $coin-size + 10px 0 10px;
     }
 
     sub {
       color: #888;
       display: block;
-      margin: 0 10px 10px $coin-size + 10px;
+      font-size: 12px;
+      margin: 0 $coin-size + 10px 10px 10px;
     }
 
     p {
