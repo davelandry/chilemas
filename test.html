@@ -41,10 +41,7 @@ speed: "0.7"
             {% for coin in list %}
             <div class="coin-desc">
               <img class="coin {{ coin.shortname }}" src="/images/blank.png" />
-              <div class="coin-text">
-                <h3>{{ coin.title }}</h3>
-                {{ coin.content }}
-              </div>
+              <h3 class="coin-text">{{ coin.title }}</h3>
             </div>
             {% endfor %}
           </section>

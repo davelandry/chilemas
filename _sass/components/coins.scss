@@ -18,16 +18,17 @@ $coin-size: 30px;
 
 #coin-descs {
   @include box();
+  @include flex();
+  @include flex-direction(row);
   margin: 0 auto;
   max-width: 600px;
   padding: 0 25px;
 
   .coin-desc {
     @include box();
-    @include flex();
-    @include flex-direction(row);
-    @include align-content(flex-start);
-    margin: 25px 0;
+    @include flex-size(1);
+    margin: 0;
+    text-align: center;
     width: 100%;
 
     img {
@@ -39,17 +40,9 @@ $coin-size: 30px;
     }
 
     .coin-text {
-      margin: 5px $coin-size 0 15px;
-
-      h3 {
-        font-weight: 700;
-      }
-
-      p {
-        margin: 10px 0;
-        min-width: 100%;
-        padding: 0;
-      }
+      font-size: 14px;
+      font-weight: 700;
+      margin: 10px 0 0;
 
       @media screen and (max-width: 415px) {
         margin: 5px 0 0 15px;
