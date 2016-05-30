@@ -11,6 +11,7 @@ footer {
   width: 100%;
 
   &.sticky {
+    background-color: $white;
     bottom: 0;
     left: 0;
     position: fixed;
