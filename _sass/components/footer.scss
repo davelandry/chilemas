@@ -1,6 +1,11 @@
 footer {
+  @include box();
+  @include flex();
+  @include flex-wrap();
+  @include align-items(center);
+  @include justify(space-between);
   margin-top: 25px;
-  padding: 10px 0 15px;
+  padding: 25px;
   position: relative;
   text-align: center;
   width: 100%;
@@ -11,64 +16,57 @@ footer {
     position: fixed;
   }
 
-  a {
-    color: #444;
-    display: block;
-    font-size: 14px;
-    margin: 0 10px;
-    padding: 4px 6px;
-    text-align: center;
+  .links {
+    text-align: left;
+    a {
+      @include transition(color 0.1s);
+      color: $black;
+      display: block;
+      font-size: 13px;
+      padding: 4px 20px 4px 0;
+      text-decoration: none;
+      width: 250px;
+
+      i {
+        display: inline-block;
+        margin: 2px 5px 0 0;
+        text-align: center;
+        width: 14px;
+      }
+
+      &:hover {
+        color: $green;
+      }
+
+    }
+  }
+
+  .logos {
+    border: 0;
+    margin: 15px 0;
+    min-width: 300px;
+    text-align: left;
     text-decoration: none;
+    #gobierno {
+      text-decoration: none;
+      img {
+        @include shadow();
+        width: 60px;
+      }
 
-    i {
-      margin: 2px 5px 0 0;
     }
 
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
+    #moiti {
+      border: 0;
+      display: inline-block;
+      margin: 5px 0 5px 15px;
+      text-decoration: none;
+
+      img {
+        width: 200px;
+      }
+
     }
-
-  }
-
-  #gobierno {
-    bottom: 15px;
-    left: 15px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-
-    img {
-      @include shadow();
-      width: 60px;
-    }
-
-  }
-
-  #moiti {
-    bottom: 20px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    right: 20px;
-
-    img {
-      width: 200px;
-    }
-
-  }
-
-}
-
-@media only screen and (max-width : 550px) {
-
-  footer {
-
-    #gobierno img {
-      height: 40px;
-      width: 40px;
-    }
-
   }
 
 }
