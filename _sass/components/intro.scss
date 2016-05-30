@@ -10,6 +10,27 @@
     padding: 0 25px;
   }
 
+  & > h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 0 25px;
+    text-align: center;
+
+    a {
+      @include transition(border-color 0.1s);
+      border-color: transparent;
+      border-style: solid;
+      border-width: 0 0 2px 0;
+      color: $green;
+      text-decoration: none;
+
+      &:hover {
+        border-color: $green;
+      }
+    }
+
+  }
+
   p {
     @include box();
     margin: 25px auto 5px;
